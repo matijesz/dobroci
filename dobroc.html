@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownia Dobroci | Opole - Rzemieślnicze Wypieki i Torty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-black: #1a1a1a;
+            --soft-white: #fcfcfc;
+            --accent-gold: #c5a367;
+            --border-color: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--soft-white); color: var(--main-black); line-height: 1.6; }
+
+        /* Nawigacja */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-text { font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2rem; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: var(--main-black); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        /* Hero */
+        header {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1500&q=80') center/cover;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero-content { width: 100%; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 15px; }
+        .hero-content p { font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Sekcje */
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+        .line { width: 60px; height: 2px; background: var(--main-black); margin: 0 auto; }
+
+        /* Menu / Oferta na bazie FB */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .menu-category { border: 1px solid var(--border-color); padding: 30px; background: white; }
+        .menu-category h3 { border-bottom: 1px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; font-size: 1.1rem; }
+        .menu-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9rem; }
+        .item-price { font-weight: 700; color: var(--accent-gold); }
+
+        /* Kontakt */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-box { background: var(--main-black); color: white; padding: 50px; border-radius: 5px; }
+        .contact-box h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 20px; }
+        .contact-details p { margin-bottom: 15px; display: flex; align-items: center; }
+
+        footer { background: #f4f4f4; padding: 40px; text-align: center; font-size: 0.8rem; color: #666; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.2rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-text">Pracownia Dobroci</div>
+        <ul>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <h1>Lokalne Rzemiosło</h1>
+            <p>Pączki • Torty • Serniki • Dobroć</p>
+        </div>
+    </header>
+
+    <section id="o-nas">
+        <div class="section-title">
+            <h2>Nasza Pracownia</h2>
+            <div class="line"></div>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Jesteśmy manufakturą słodkości z Opola. Każdego dnia tworzymy dla Was wypieki oparte na naturalnych składnikach, pasji i tradycyjnych recepturach. Znajdziecie nas w dwóch sercach miasta: na Rynku oraz przy ulicy Ozimskiej.
+        </p>
+    </section>
+
+    <section id="oferta" style="background-color: #f9f9f9;">
+        <div class="section-title">
+            <h2>Z naszych postów</h2>
+            <div class="line"></div>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Pączki Premium</h3>
+                <div class="menu-item"><span>Pistacja z Maliną</span><span class="item-price">16 zł</span></div>
+                <div class="menu-item"><span>Słony Karmel z Popcornem</span><span class="item-price">16 zł</span></div>
+                <div class="menu-item"><span>Ferrero Rocher</span><span class="item-price">16 zł</span></div>
+                <div class="menu-item"><span>Zestaw Degustacyjny (6 szt.)</span><span class="item-price">59 zł</span></div>
+            </div>
+            <div class="menu-category">
+                <h3>Serniki (Festiwal)</h3>
+                <div class="menu-item"><span>Sernik Pistacjowy</span><span class="item-price">95 zł</span></div>
+                <div class="menu-item"><span>Sernik Lotus / Oreo</span><span class="item-price">95 zł</span></div>
+                <div class="menu-item"><span>Sernik Baski / Tiramisu</span><span class="item-price">95 zł</span></div>
+            </div>
+            <div class="menu-category">
+                <h3>Torty Okolicznościowe</h3>
+                <div class="menu-item"><span>Torty Artystyczne</span><span class="item-price">od 150 zł</span></div>
+                <div class="menu-item"><span>Oferta Sezonowa (Wielkanoc)</span><span class="item-price">wg menu</span></div>
+                <div class="menu-item"><span>Pakiety Degustacyjne Ciast</span><span class="item-price">165 zł</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>Odwiedź nas</h3>
+                <div class="contact-details">
+                    <p>📍 Rynek 19, Opole</p>
+                    <p>📍 ul. Ozimska 4, Opole</p>
+                    <p>📞 +48 739 909 679</p>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <h3>Zamówienia</h3>
+                <p>Przyjmujemy zamówienia na torty, paczki pączków oraz zestawy świąteczne. Zadzwoń lub napisz do nas na Facebooku!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pracownia Dobroci Opole. Zapraszamy do najsłodszych miejsc w mieście.</p>
+    </footer>
+
+</body>
+</html>
